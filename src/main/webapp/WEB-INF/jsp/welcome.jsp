@@ -37,6 +37,7 @@
 			<h1>Spring Boot Web JSP Example</h1>
 			<h2>Message: ${message}</h2>
 			<h2>Author: ${author}</h2>
+			<h2>Created : ${created}</h2>
 		</div>
 
 	</div>
