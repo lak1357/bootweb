@@ -33,7 +33,7 @@ public class WelcomeController {
 		model.put("message", this.message);
 		model.put("author", "Lakshitha");
 		model.put("created", "2019");
-		model.put("host", "ip");
+		model.put("host", ip);
 		
 		
 		return "welcome";
