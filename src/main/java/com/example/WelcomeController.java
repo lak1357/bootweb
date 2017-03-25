@@ -1,5 +1,7 @@
 package com.example;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -15,9 +17,25 @@ public class WelcomeController {
 
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
+		
+		String ip = "0";
+		
+		try 
+		{
+			InetAddress inet = InetAddress.getLocalHost();
+			ip = inet.getHostAddress();
+		} 
+		catch (UnknownHostException e) 
+		{
+			e.printStackTrace();
+		}
+		
 		model.put("message", this.message);
 		model.put("author", "Lakshitha");
 		model.put("created", "2019");
+		model.put("host", "ip");
+		
+		
 		return "welcome";
 	}
 

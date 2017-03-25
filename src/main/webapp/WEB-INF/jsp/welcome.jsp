@@ -38,6 +38,7 @@
 			<h2>Message: ${message}</h2>
 			<h2>Author: ${author}</h2>
 			<h2>Created : ${created}</h2>
+			<h2>Host : ${host}</h2>
 		</div>
 
 	</div>
